@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item type="id" name="playerOneText">false</item>
+  <item type="id" name="playerOneBid">false</item>
+  <item type="id" name="playerTwoText">false</item>
+  <item type="id" name="playerTwoBid">false</item>
+  <item type="id" name="playerOneScore">false</item>
+  <item type="id" name="playerOneTricks">false</item>
+  <item type="id" name="playerTwoScore">false</item>
+  <item type="id" name="playerTwoTricks">false</item>
+  <item type="id" name="playerFourText">false</item>
+  <item type="id" name="playerFourBid">false</item>
+  <item type="id" name="playerThreeText">false</item>
+  <item type="id" name="playerThreeBid">false</item>
+  <item type="id" name="playerFourScore">false</item>
+  <item type="id" name="playerFourTricks">false</item>
+  <item type="id" name="playerThreeScore">false</item>
+  <item type="id" name="playerThreeTricks">false</item>
+  <item type="id" name="finishEditButton">false</item>
+  <item type="id" name="startGameButton">false</item>
+  <item type="id" name="continueGameButton">false</item>
+  <item type="id" name="textView1">false</item>
+  <item type="id" name="confirmButton">false</item>
+  <item type="id" name="finishRoundButton">false</item>
+  <item type="id" name="scoreSheetButton">false</item>
+  <item type="id" name="editRoundButton">false</item>
+  <item type="id" name="roundNumberSpinner">false</item>
+  <item type="id" name="output">false</item>
+</resources>

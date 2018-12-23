@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spades Scorecard</string>
+    <string name="InvalidInput">Invalid input, select an appropriate round</string>
+    <string name="NoSelection">No selection for bid or tricks</string>
+    <string name="NotEnoughTricks">Tricks Entered != 13</string>
+    <string name="Error">Error</string>
+    <string name="new_game">New Game</string>
+    <string name="continue_game">Continue Game</string>
+    <string name="edit_a_round">Edit a Round</string>
+    <string name="bid">Bid</string>
+    <string name="tricks">Tricks</string>
+    <string name="blind_nil">00</string>
+    <string name="winner">Winner!</string>
+    <string name="tie">Tie Game!</string>
+    <string name="team_one_wins">Team One Wins!</string>
+    <string name="team_two_wins">Team Two Wins!</string>
+    <string name="continue_playing">Continue Playing!</string>
+    <string name="player_one_name">Player 1</string>
+    <string name="player_two_name">Player 2</string>
+    <string name="player_three_name">Player 3</string>
+    <string name="player_four_name">Player 4</string>
+    <string name="team_one">Team One:</string>
+    <string name="team_two">Team Two:</string>
+    <string name="confirm">Confirm</string>
+    <string name="player_1_name_hint">Player 1</string>
+    <string name="player_2_name_hint">Player 2</string>
+    <string name="player_3_name_hint">Player 3</string>
+    <string name="player_4_name_hint">Player 4</string>
+    <string name="no_game_found">No game found. Start a new game.</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="erase_current_game">This action will erase the current game you have stored.</string>
+</resources>

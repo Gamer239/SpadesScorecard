@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.SpadesScorecard">
+    
+    <application android:icon="@drawable/icon" android:label="@string/app_name" >
+        <activity android:label="Spades Scorecard" android:name="com.SpadesScorecard.Menu" android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="Spades Scorecard" android:name="com.SpadesScorecard.Scoreboard" android:screenOrientation="landscape" android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+            <intent-filter>
+                <action android:name="com.SpadesScorecard.BEGINGAME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="Spades Scorecard" android:name="com.SpadesScorecard.PlayerNames" android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+            <intent-filter>
+                <action android:name="com.SpadesScorecard.SETNAMES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="Spades Scorecard" android:name="com.SpadesScorecard.Scoresheet" android:noHistory="true" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.SpadesScorecard.SCORESHEET"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="Spades Scorecard" android:name="com.SpadesScorecard.EditRound" android:noHistory="true" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.SpadesScorecard.EDITROUND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

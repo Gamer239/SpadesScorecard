@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:layout_width="0.0dip">
+        <Button android:id="@id/editRoundButton" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="@string/edit_a_round" android:layout_weight="5.0" />
+        <Spinner android:id="@id/roundNumberSpinner" android:layout_width="0.0dip" android:layout_height="50.0dip" android:layout_weight="1.0" />
+    </TableRow>
+    <TableRow android:layout_width="fill_parent" android:layout_height="600.0dip">
+        <ScrollView android:layout_width="426.0dip" android:layout_height="600.0dip" android:layout_weight="1.0">
+
+            <TextView
+                android:id="@id/output"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:textSize="12.0sp"
+                android:typeface="monospace" />
+        </ScrollView>
+    </TableRow>
+</TableLayout>

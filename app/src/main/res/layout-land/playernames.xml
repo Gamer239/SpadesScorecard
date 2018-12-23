@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="@string/team_one"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Holo"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024"
+        tools:layout_conversion_absoluteHeight="44dp"
+        tools:layout_conversion_absoluteWidth="592dp" />
+
+    <EditText
+        android:id="@+id/playerOneText"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/player_1_name_hint"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="200dp" />
+
+    <EditText
+        android:id="@+id/playerThreeText"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/player_3_name_hint"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/playerOneText"
+        app:layout_constraintStart_toStartOf="@+id/playerOneText"
+        app:layout_constraintTop_toBottomOf="@+id/playerOneText"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="200dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/team_two"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="592dp" />
+
+    <EditText
+        android:id="@id/playerTwoText"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/player_2_name_hint"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="200dp" />
+
+    <EditText
+        android:id="@id/playerFourText"
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/player_4_name_hint"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/playerTwoText"
+        app:layout_constraintStart_toStartOf="@+id/playerTwoText"
+        app:layout_constraintTop_toBottomOf="@+id/playerTwoText"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="200dp" />
+
+    <Button
+        android:id="@id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="bottom"
+        android:text="@string/confirm"
+        android:textSize="20.0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="592dp" />
+
+</android.support.constraint.ConstraintLayout>

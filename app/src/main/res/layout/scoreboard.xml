@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:background="@drawable/scoreboard_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:layout_height="0.0dip" android:layout_weight="45.0">
+        <TextView android:textSize="22.0sp" android:textColor="#ff000000" android:layout_gravity="center" android:id="@id/playerOneText" android:layout_width="0.0dip" android:layout_height="45.0dip" android:text="Player 1" android:layout_weight="3.0" />
+
+        <Spinner
+            android:id="@id/playerOneBid"
+            android:layout_width="0.0dip"
+            android:layout_height="45.0dip"
+            android:layout_weight="2.5"
+            android:textColor="#ff000000" />
+        <TextView android:textSize="22.0sp" android:textColor="#ff000000" android:layout_gravity="center" android:id="@id/playerTwoText" android:layout_width="0.0dip" android:layout_height="45.0dip" android:text="Player 2" android:layout_weight="3.0" />
+        <Spinner android:textColor="#ff000000" android:id="@id/playerTwoBid" android:layout_width="0.0dip" android:layout_height="45.0dip" android:text="Bids" android:layout_weight="2.5" />
+    </TableRow>
+    <TableRow android:layout_height="0.0dip" android:layout_weight="45.0">
+        <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:layout_gravity="center_vertical" android:id="@id/playerOneScore" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="3.0" />
+        <Spinner android:textColor="#ff000000" android:id="@id/playerOneTricks" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="2.5" />
+        <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:layout_gravity="center_vertical" android:id="@id/playerTwoScore" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="3.0" />
+        <Spinner android:textColor="#ff000000" android:id="@id/playerTwoTricks" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="2.5" />
+    </TableRow>
+    <TableRow android:layout_height="0.0dip" android:layout_weight="45.0">
+        <TextView android:textSize="22.0sp" android:textColor="#ff000000" android:layout_gravity="center" android:id="@id/playerFourText" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="3.0" />
+        <Spinner android:textColor="#ff000000" android:id="@id/playerFourBid" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="2.5" />
+        <TextView android:textSize="22.0sp" android:textColor="#ff000000" android:layout_gravity="center" android:id="@id/playerThreeText" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="3.0" />
+        <Spinner android:textColor="#ff000000" android:id="@id/playerThreeBid" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="2.5" />
+    </TableRow>
+    <TableRow android:layout_height="0.0dip" android:layout_weight="45.0">
+        <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:layout_gravity="center_vertical" android:id="@id/playerFourScore" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="3.0" />
+        <Spinner android:textColor="#ff000000" android:id="@id/playerFourTricks" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="2.5" />
+        <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:layout_gravity="center_vertical" android:id="@id/playerThreeScore" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="3.0" />
+        <Spinner android:textColor="#ff000000" android:id="@id/playerThreeTricks" android:layout_width="0.0dip" android:layout_height="45.0dip" android:layout_weight="2.5" />
+    </TableRow>
+    <TableRow android:layout_height="0.0dip" android:layout_weight="40.0">
+
+        <Button
+            android:id="@id/finishRoundButton"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:text="Finish Round"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@id/scoreSheetButton"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:text="Scoreboard"
+            android:textSize="20.0sp" />
+    </TableRow>
+</TableLayout>

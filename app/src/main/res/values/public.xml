@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <public type="drawable" name="icon" id="0x7f020000" />
+  <public type="drawable" name="menu_background" id="0x7f020001" />
+  <public type="drawable" name="scoreboard_background" id="0x7f020002" />
+  <public type="layout" name="editround" id="0x7f030000" />
+  <public type="layout" name="menu" id="0x7f030001" />
+  <public type="layout" name="playernames" id="0x7f030002" />
+  <public type="layout" name="scoreboard" id="0x7f030003" />
+  <public type="layout" name="scoresheet" id="0x7f030004" />
+  <public type="string" name="app_name" id="0x7f040000" />
+  <public type="array" name="bid_array" id="0x7f050000" />
+  <public type="array" name="trick_array" id="0x7f050001" />
+  <public type="array" name="choice_array" id="0x7f050002" />
+  <public type="id" name="playerOneText" id="0x7f060000" />
+  <public type="id" name="playerOneBid" id="0x7f060001" />
+  <public type="id" name="playerTwoText" id="0x7f060002" />
+  <public type="id" name="playerTwoBid" id="0x7f060003" />
+  <public type="id" name="playerOneScore" id="0x7f060004" />
+  <public type="id" name="playerOneTricks" id="0x7f060005" />
+  <public type="id" name="playerTwoScore" id="0x7f060006" />
+  <public type="id" name="playerTwoTricks" id="0x7f060007" />
+  <public type="id" name="playerFourText" id="0x7f060008" />
+  <public type="id" name="playerFourBid" id="0x7f060009" />
+  <public type="id" name="playerThreeText" id="0x7f06000a" />
+  <public type="id" name="playerThreeBid" id="0x7f06000b" />
+  <public type="id" name="playerFourScore" id="0x7f06000c" />
+  <public type="id" name="playerFourTricks" id="0x7f06000d" />
+  <public type="id" name="playerThreeScore" id="0x7f06000e" />
+  <public type="id" name="playerThreeTricks" id="0x7f06000f" />
+  <public type="id" name="finishEditButton" id="0x7f060010" />
+  <public type="id" name="startGameButton" id="0x7f060011" />
+  <public type="id" name="continueGameButton" id="0x7f060012" />
+  <public type="id" name="textView1" id="0x7f060013" />
+  <public type="id" name="confirmButton" id="0x7f060014" />
+  <public type="id" name="finishRoundButton" id="0x7f060015" />
+  <public type="id" name="scoreSheetButton" id="0x7f060016" />
+  <public type="id" name="editRoundButton" id="0x7f060017" />
+  <public type="id" name="roundNumberSpinner" id="0x7f060018" />
+  <public type="id" name="output" id="0x7f060019" />
+</resources>
