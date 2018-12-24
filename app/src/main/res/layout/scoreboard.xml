@@ -39,7 +39,7 @@
             android:layout_width="0.0dip"
             android:layout_height="match_parent"
             android:layout_weight="1.0"
-            android:text="Finish Round"
+            android:text="@string/finish_round"
             android:textSize="20.0sp" />
 
         <Button
@@ -48,7 +48,7 @@
             android:layout_width="0.0dip"
             android:layout_height="match_parent"
             android:layout_weight="1.0"
-            android:text="Scoreboard"
+            android:text="@string/scoreboard"
             android:textSize="20.0sp" />
     </TableRow>
 </TableLayout>

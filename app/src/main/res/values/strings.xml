@@ -26,4 +26,6 @@
     <string name="no_game_found">No game found. Start a new game.</string>
     <string name="are_you_sure">Are you sure?</string>
     <string name="erase_current_game">This action will erase the current game you have stored.</string>
+    <string name="scoreboard">Scoreboard</string>
+    <string name="finish_round">Finish Round</string>
 </resources>
