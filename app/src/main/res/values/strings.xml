@@ -28,4 +28,5 @@
     <string name="erase_current_game">This action will erase the current game you have stored.</string>
     <string name="scoreboard">Scoreboard</string>
     <string name="finish_round">Finish Round</string>
+    <string name="finish_round_edit">Finish Round Edit</string>
 </resources>
