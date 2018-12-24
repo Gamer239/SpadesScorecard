@@ -62,7 +62,7 @@ public class Scoresheet extends Activity {
 
     private String getScoresheetText() {
         String line;
-        String delim = "00/13 "; //longest round score
+        String delim = "00/13 "; //longest example score
         String output;
 
         output = String.format( "Round %-" + Math.max( Menu.game.getPlayerOneName().length() + 1, delim.length() ) + "s", Menu.game.getPlayerOneName() );
