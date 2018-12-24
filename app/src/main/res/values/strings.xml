@@ -16,10 +16,6 @@
     <string name="team_one_wins">Team One Wins!</string>
     <string name="team_two_wins">Team Two Wins!</string>
     <string name="continue_playing">Continue Playing!</string>
-    <string name="player_one_name">Player 1</string>
-    <string name="player_two_name">Player 2</string>
-    <string name="player_three_name">Player 3</string>
-    <string name="player_four_name">Player 4</string>
     <string name="team_one">Team One:</string>
     <string name="team_two">Team Two:</string>
     <string name="confirm">Confirm</string>
