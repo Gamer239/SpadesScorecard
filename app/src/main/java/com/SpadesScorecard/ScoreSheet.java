@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class Scoresheet extends Activity {
+public class ScoreSheet extends Activity {
     private Button editRoundButton;
     private TextView output;
     private Spinner roundNumber = null;
@@ -22,10 +22,10 @@ public class Scoresheet extends Activity {
 
         public void onClick(View v) {
             try {
-                Menu.game.setRoundIndex(Scoresheet.this.getRoundSelection() - 1);
-                Scoresheet.this.startActivity(new Intent("com.SpadesScorecard.EDITROUND"));
+                Menu.game.setRoundIndex(ScoreSheet.this.getRoundSelection() - 1);
+                ScoreSheet.this.startActivity(new Intent("com.SpadesScorecard.EDITROUND"));
             } catch (Exception e) {
-                new Builder(Scoresheet.this).setMessage(R.string.InvalidInput).setTitle(R.string.Error).setCancelable(true).setNeutralButton(android.R.string.ok, null).show();
+                new Builder(ScoreSheet.this).setMessage(R.string.InvalidInput).setTitle(R.string.Error).setCancelable(true).setNeutralButton(android.R.string.ok, null).show();
             }
         }
     }
@@ -44,7 +44,7 @@ public class Scoresheet extends Activity {
     protected void onResume() {
         super.onResume();
         try {
-            String table = getScoresheetText();
+            String table = getScoreSheetText();
             this.output.setText(table);
         } catch (Exception e) {
             new Builder(this).setMessage(R.string.InvalidInput).setTitle(R.string.Error).setCancelable(true).setNeutralButton(android.R.string.ok, null).show();
@@ -60,15 +60,15 @@ public class Scoresheet extends Activity {
         throw new InvalidInputException();
     }
 
-    private String getScoresheetText() {
+    private String getScoreSheetText() {
         String line;
-        String delim = "00/13 "; //longest example score
+        String spacing = "00/13 "; //longest example score
         String output;
 
-        output = String.format( "Round %-" + Math.max( Menu.game.getPlayerOneName().length() + 1, delim.length() ) + "s", Menu.game.getPlayerOneName() );
-        output = String.valueOf(output) + String.format( "%-" + Math.max( Menu.game.getPlayerTwoName().length() + 1, delim.length() ) + "s", Menu.game.getPlayerTwoName() );
-        output = String.valueOf(output) + String.format( "%-" + Math.max( Menu.game.getPlayerThreeName().length() + 1, delim.length() ) + "s", Menu.game.getPlayerThreeName() );
-        output = String.valueOf(output) + String.format( "%-" + Math.max( Menu.game.getPlayerFourName().length() + 1, delim.length() ) + "s", Menu.game.getPlayerFourName() );
+        output = String.format( "Round %-" + Math.max( Menu.game.getPlayerOneName().length() + 1, spacing.length() ) + "s", Menu.game.getPlayerOneName() );
+        output = String.valueOf(output) + String.format( "%-" + Math.max( Menu.game.getPlayerTwoName().length() + 1, spacing.length() ) + "s", Menu.game.getPlayerTwoName() );
+        output = String.valueOf(output) + String.format( "%-" + Math.max( Menu.game.getPlayerThreeName().length() + 1, spacing.length() ) + "s", Menu.game.getPlayerThreeName() );
+        output = String.valueOf(output) + String.format( "%-" + Math.max( Menu.game.getPlayerFourName().length() + 1, spacing.length() ) + "s", Menu.game.getPlayerFourName() );
         output = String.valueOf(output) + "T1 Bags T1 Score T2 Bags T2 Score\n";
 
         for ( int i = 0; i < Menu.game.getRoundCount(); i++ ) {
@@ -76,16 +76,16 @@ public class Scoresheet extends Activity {
             line = String.format("%-6s", String.valueOf(i+1));
 
             output = String.valueOf(output) + line;
-            line = String.format("%-" + Math.max(Menu.game.getPlayerOneName().length() + 1, delim.length()) + "s", a.displayPlayerOne());
+            line = String.format("%-" + Math.max(Menu.game.getPlayerOneName().length() + 1, spacing.length()) + "s", a.displayPlayerOne());
 
             output = String.valueOf(output) + line;
-            line = String.format("%-" + Math.max(Menu.game.getPlayerTwoName().length() + 1, delim.length()) + "s", a.displayPlayerTwo());
+            line = String.format("%-" + Math.max(Menu.game.getPlayerTwoName().length() + 1, spacing.length()) + "s", a.displayPlayerTwo());
 
             output = String.valueOf(output) + line;
-            line = String.format("%-" + Math.max(Menu.game.getPlayerThreeName().length() + 1, delim.length()) + "s", a.displayPlayerThree());
+            line = String.format("%-" + Math.max(Menu.game.getPlayerThreeName().length() + 1, spacing.length()) + "s", a.displayPlayerThree());
 
             output = String.valueOf(output) + line;
-            line = String.format("%-" + Math.max(Menu.game.getPlayerFourName().length() + 1, delim.length()) + "s", a.displayPlayerFour());
+            line = String.format("%-" + Math.max(Menu.game.getPlayerFourName().length() + 1, spacing.length()) + "s", a.displayPlayerFour());
 
             output = String.valueOf(output) + line;
 

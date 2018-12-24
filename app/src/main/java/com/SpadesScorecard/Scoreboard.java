@@ -63,8 +63,8 @@ public class Scoreboard extends Activity {
         }
     }
 
-    class ScoresheetBtn implements OnClickListener {
-        ScoresheetBtn() {
+    class ScoreSheetBtn implements OnClickListener {
+        ScoreSheetBtn() {
         }
 
         public void onClick(View v) {
@@ -127,7 +127,7 @@ public class Scoreboard extends Activity {
         setSelections();
         setScreen();
         findViewById(R.id.finishRoundButton).setOnClickListener(new FinishRoundBtn());
-        findViewById(R.id.scoreSheetButton).setOnClickListener(new ScoresheetBtn());
+        findViewById(R.id.scoreSheetButton).setOnClickListener(new ScoreSheetBtn());
     }
 
     protected void onStop() {

@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:label="Spades Scorecard" android:name="com.SpadesScorecard.Scoresheet" android:noHistory="true" android:screenOrientation="landscape">
+        <activity android:label="Spades Scorecard" android:name="com.SpadesScorecard.ScoreSheet" android:noHistory="true" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="com.SpadesScorecard.SCORESHEET"/>
                 <category android:name="android.intent.category.DEFAULT"/>
