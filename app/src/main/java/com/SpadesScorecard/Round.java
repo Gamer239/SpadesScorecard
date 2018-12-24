@@ -148,35 +148,35 @@ class Round {
         return this.teamTwoScore;
     }
 
-    public int getPlayerOneBid() {
+    int getPlayerOneBid() {
         return this.playerOneBid;
     }
 
-    public int getPlayerTwoBid() {
+    int getPlayerTwoBid() {
         return this.playerTwoBid;
     }
 
-    public int getPlayerThreeBid() {
+    int getPlayerThreeBid() {
         return this.playerThreeBid;
     }
 
-    public int getPlayerFourBid() {
+    int getPlayerFourBid() {
         return this.playerFourBid;
     }
 
-    public int getPlayerOneTricks() {
+    int getPlayerOneTricks() {
         return this.playerOneTricks;
     }
 
-    public int getPlayerTwoTricks() {
+    int getPlayerTwoTricks() {
         return this.playerTwoTricks;
     }
 
-    public int getPlayerThreeTricks() {
+    int getPlayerThreeTricks() {
         return this.playerThreeTricks;
     }
 
-    public int getPlayerFourTricks() {
+    int getPlayerFourTricks() {
         return this.playerFourTricks;
     }
 
