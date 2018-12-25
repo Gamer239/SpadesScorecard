@@ -32,4 +32,6 @@
     <string name="high_bid_trick">13</string>
     <string name="continue_btn">Continue</string>
     <string name="cancel_btn">Cancel</string>
+    <string name="team_score">Team Score:</string>
+    <string name="team_bags">Team Bags:</string>
 </resources>

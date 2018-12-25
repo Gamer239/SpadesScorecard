@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class Scoreboard extends Activity {
     private static int p4tPos = 0;
     private static int p4bPos = 0;
@@ -202,14 +204,16 @@ public class Scoreboard extends Activity {
     }
 
     private void setScreen() {
+        String team_score = getResources().getString(R.string.team_score);
+        String team_bags = getResources().getString(R.string.team_bags);
         this.playerOneName.setText(String.format(" %s", Menu.game.getPlayerOneName()));
         this.playerTwoName.setText(String.format(" %s", Menu.game.getPlayerTwoName()));
         this.playerThreeName.setText(String.format(" %s", Menu.game.getPlayerThreeName()));
         this.playerFourName.setText(String.format(" %s", Menu.game.getPlayerFourName()));
-        this.playerOneScore.setText(" Team Score: " + Menu.game.getTeamOneTotal() + "\n Team Bags: " + Menu.game.getTeamOneBags());
-        this.playerTwoScore.setText(" Team Score: " + Menu.game.getTeamTwoTotal() + "\n Team Bags: " + Menu.game.getTeamTwoBags());
-        this.playerThreeScore.setText(" Team Score: " + Menu.game.getTeamOneTotal() + "\n Team Bags: " + Menu.game.getTeamOneBags());
-        this.playerFourScore.setText(" Team Score: " + Menu.game.getTeamTwoTotal() + "\n Team Bags: " + Menu.game.getTeamTwoBags());
+        this.playerOneScore.setText(String.format(Locale.US, " %s %d\n %s %d", team_score, Menu.game.getTeamOneTotal(), team_bags, Menu.game.getTeamOneBags()));
+        this.playerTwoScore.setText(String.format(Locale.US, " %s %d\n %s %d", team_score, Menu.game.getTeamTwoTotal(), team_bags, Menu.game.getTeamTwoBags()));
+        this.playerThreeScore.setText(String.format(Locale.US, " %s %d\n %s %d", team_score, Menu.game.getTeamOneTotal(), team_bags, Menu.game.getTeamOneBags()));
+        this.playerFourScore.setText(String.format(Locale.US, " %s %d\n %s %d", team_score, Menu.game.getTeamTwoTotal(), team_bags, Menu.game.getTeamTwoBags()));
     }
 
     private void getSelections() {
