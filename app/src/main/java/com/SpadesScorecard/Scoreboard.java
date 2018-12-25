@@ -173,22 +173,22 @@ public class Scoreboard extends Activity {
             throw new NoSelectionException();
         }
         if (playerOneBid.getSelectedItem().equals(blindNil)) {
-            this.p1b = -1;
+            this.p1b = Game.blindNilIdx;
         } else {
             this.p1b = Integer.parseInt((String) playerOneBid.getSelectedItem());
         }
         if (playerTwoBid.getSelectedItem().equals(blindNil)) {
-            this.p2b = -1;
+            this.p2b = Game.blindNilIdx;
         } else {
             this.p2b = Integer.parseInt((String) playerTwoBid.getSelectedItem());
         }
         if (playerThreeBid.getSelectedItem().equals(blindNil)) {
-            this.p3b = -1;
+            this.p3b = Game.blindNilIdx;
         } else {
             this.p3b = Integer.parseInt((String) playerThreeBid.getSelectedItem());
         }
         if ( playerFourBid.getSelectedItem().equals( blindNil ) ) {
-            this.p4b = -1;
+            this.p4b = Game.blindNilIdx;
         } else {
             this.p4b = Integer.parseInt((String) playerFourBid.getSelectedItem());
         }
