@@ -9,23 +9,17 @@ class Round {
     private int[] playerTricks = {0,0,0,0};
     private static final int underBidPenalty = 10;
 
-    // Player Index
-    private static final int pOneIdx = 0;
-    private static final int pTwoIdx = 1;
-    private static final int pThreeIdx = 2;
-    private static final int pFourIdx = 3;
-
     Round(int playerOneBid, int playerOneTricks, int playerTwoBid, int playerTwoTricks, int playerThreeBid, int playerThreeTricks, int playerFourBid, int playerFourTricks) {
-        this.playerBid[pOneIdx] = playerOneBid;
-        this.playerBid[pTwoIdx] = playerTwoBid;
-        this.playerBid[pThreeIdx] = playerThreeBid;
-        this.playerBid[pFourIdx] = playerFourBid;
-        this.playerTricks[pOneIdx] = playerOneTricks;
-        this.playerTricks[pTwoIdx] = playerTwoTricks;
-        this.playerTricks[pThreeIdx] = playerThreeTricks;
-        this.playerTricks[pFourIdx] = playerFourTricks;
-        calculateTeamScore(0, pOneIdx, pThreeIdx);
-        calculateTeamScore(1, pTwoIdx, pFourIdx);
+        this.playerBid[Game.pOneIdx] = playerOneBid;
+        this.playerBid[Game.pTwoIdx] = playerTwoBid;
+        this.playerBid[Game.pThreeIdx] = playerThreeBid;
+        this.playerBid[Game.pFourIdx] = playerFourBid;
+        this.playerTricks[Game.pOneIdx] = playerOneTricks;
+        this.playerTricks[Game.pTwoIdx] = playerTwoTricks;
+        this.playerTricks[Game.pThreeIdx] = playerThreeTricks;
+        this.playerTricks[Game.pFourIdx] = playerFourTricks;
+        calculateTeamScore(0, Game.pOneIdx, Game.pThreeIdx);
+        calculateTeamScore(1, Game.pTwoIdx, Game.pFourIdx);
     }
 
     private void calculateTeamScore(int team, int playerA, int playerB) {
@@ -92,35 +86,35 @@ class Round {
     }
 
     int getPlayerOneBid() {
-        return this.playerBid[pOneIdx];
+        return this.playerBid[Game.pOneIdx];
     }
 
     int getPlayerTwoBid() {
-        return this.playerBid[pTwoIdx];
+        return this.playerBid[Game.pTwoIdx];
     }
 
     int getPlayerThreeBid() {
-        return this.playerBid[pThreeIdx];
+        return this.playerBid[Game.pThreeIdx];
     }
 
     int getPlayerFourBid() {
-        return this.playerBid[pFourIdx];
+        return this.playerBid[Game.pFourIdx];
     }
 
     int getPlayerOneTricks() {
-        return this.playerTricks[pOneIdx];
+        return this.playerTricks[Game.pOneIdx];
     }
 
     int getPlayerTwoTricks() {
-        return this.playerTricks[pTwoIdx];
+        return this.playerTricks[Game.pTwoIdx];
     }
 
     int getPlayerThreeTricks() {
-        return this.playerTricks[pThreeIdx];
+        return this.playerTricks[Game.pThreeIdx];
     }
 
     int getPlayerFourTricks() {
-        return this.playerTricks[pFourIdx];
+        return this.playerTricks[Game.pFourIdx];
     }
 
     int getTeamOneBags() {
@@ -132,27 +126,27 @@ class Round {
     }
 
     void editPlayerOne(int playerOneBid, int playerOneTricks) {
-        this.playerBid[pOneIdx] = playerOneBid;
-        this.playerTricks[pOneIdx] = playerOneTricks;
-        calculateTeamScore(0, pOneIdx, pThreeIdx);
+        this.playerBid[Game.pOneIdx] = playerOneBid;
+        this.playerTricks[Game.pOneIdx] = playerOneTricks;
+        calculateTeamScore(0, Game.pOneIdx, Game.pThreeIdx);
     }
 
     void editPlayerTwo(int playerTwoBid, int playerTwoTricks) {
-        this.playerBid[pTwoIdx] = playerTwoBid;
-        this.playerTricks[pTwoIdx] = playerTwoTricks;
-        calculateTeamScore(1, pTwoIdx, pFourIdx);
+        this.playerBid[Game.pTwoIdx] = playerTwoBid;
+        this.playerTricks[Game.pTwoIdx] = playerTwoTricks;
+        calculateTeamScore(1, Game.pTwoIdx, Game.pFourIdx);
     }
 
     void editPlayerThree(int playerThreeBid, int playerThreeTricks) {
-        this.playerBid[pThreeIdx] = playerThreeBid;
-        this.playerTricks[pThreeIdx] = playerThreeTricks;
-        calculateTeamScore(0, pOneIdx, pThreeIdx);
+        this.playerBid[Game.pThreeIdx] = playerThreeBid;
+        this.playerTricks[Game.pThreeIdx] = playerThreeTricks;
+        calculateTeamScore(0, Game.pOneIdx, Game.pThreeIdx);
     }
 
     void editPlayerFour(int playerFourBid, int playerFourTricks) {
-        this.playerBid[pFourIdx] = playerFourBid;
-        this.playerTricks[pFourIdx] = playerFourTricks;
-        calculateTeamScore(1, pTwoIdx, pFourIdx);
+        this.playerBid[Game.pFourIdx] = playerFourBid;
+        this.playerTricks[Game.pFourIdx] = playerFourTricks;
+        calculateTeamScore(1, Game.pTwoIdx, Game.pFourIdx);
     }
 
 }

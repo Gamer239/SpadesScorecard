@@ -27,6 +27,12 @@ class Game {
     final static int teamTwoWinner = 2;
     final static int teamTieWinner = 3;
 
+    // Player Index
+    static final int pOneIdx = 0;
+    static final int pTwoIdx = 1;
+    static final int pThreeIdx = 2;
+    static final int pFourIdx = 3;
+
     void addRound(int playerOneBid, int playerOneTricks, int playerTwoBid, int playerTwoTricks, int playerThreeBid, int playerThreeTricks, int playerFourBid, int playerFourTricks) {
         this.roundList.add(new Round(playerOneBid, playerOneTricks, playerTwoBid, playerTwoTricks, playerThreeBid, playerThreeTricks, playerFourBid, playerFourTricks));
     }
