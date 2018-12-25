@@ -3,10 +3,10 @@ package com.SpadesScorecard;
 class Round {
     private static final int doubleNilWinner = 200;
     private static final int nilWinner = 100;
-    private int[] teamScore = {0,0};
-    private int[] teamBags = {0,0};
-    private int[] playerBid = {0,0,0,0};
-    private int[] playerTricks = {0,0,0,0};
+    private final int[] teamScore = {0,0};
+    private final int[] teamBags = {0,0};
+    private final int[] playerBid = {0,0,0,0};
+    private final int[] playerTricks = {0,0,0,0};
     private static final int underBidPenalty = 10;
 
     Round(int playerOneBid, int playerOneTricks, int playerTwoBid, int playerTwoTricks, int playerThreeBid, int playerThreeTricks, int playerFourBid, int playerFourTricks) {

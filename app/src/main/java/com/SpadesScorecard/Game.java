@@ -9,7 +9,7 @@ class Game {
     private String playerThreeName;
     private String playerTwoName;
     private int roundIndex;
-    private ArrayList<Round> roundList = new ArrayList<>();
+    private final ArrayList<Round> roundList = new ArrayList<>();
     private int teamOneBags = 0;
     private int teamOneTotal = 0;
     private int teamTwoBags = 0;
