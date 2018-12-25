@@ -38,7 +38,8 @@
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1"
         tools:layout_conversion_absoluteHeight="45dp"
-        tools:layout_conversion_absoluteWidth="200dp" />
+        tools:layout_conversion_absoluteWidth="200dp"
+        android:importantForAutofill="no" tools:targetApi="o"/>
 
     <EditText
         android:id="@+id/playerThreeText"
@@ -53,7 +54,8 @@
         app:layout_constraintStart_toStartOf="@+id/playerOneText"
         app:layout_constraintTop_toBottomOf="@+id/playerOneText"
         tools:layout_conversion_absoluteHeight="45dp"
-        tools:layout_conversion_absoluteWidth="200dp" />
+        tools:layout_conversion_absoluteWidth="200dp"
+        android:importantForAutofill="no" tools:targetApi="o"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -85,7 +87,8 @@
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:layout_conversion_absoluteHeight="45dp"
-        tools:layout_conversion_absoluteWidth="200dp" />
+        tools:layout_conversion_absoluteWidth="200dp"
+        android:importantForAutofill="no" tools:targetApi="o"/>
 
     <EditText
         android:id="@id/playerFourText"
@@ -100,7 +103,8 @@
         app:layout_constraintStart_toStartOf="@+id/playerTwoText"
         app:layout_constraintTop_toBottomOf="@+id/playerTwoText"
         tools:layout_conversion_absoluteHeight="45dp"
-        tools:layout_conversion_absoluteWidth="200dp" />
+        tools:layout_conversion_absoluteWidth="200dp"
+        android:importantForAutofill="no" tools:targetApi="o"/>
 
     <Button
         android:id="@id/confirmButton"
