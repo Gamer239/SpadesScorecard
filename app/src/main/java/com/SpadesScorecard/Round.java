@@ -24,116 +24,61 @@ class Round {
         this.playerTricks[pTwoIdx] = playerTwoTricks;
         this.playerTricks[pThreeIdx] = playerThreeTricks;
         this.playerTricks[pFourIdx] = playerFourTricks;
-        calculateTeamOneScore();
-        calculateTeamTwoScore();
+        calculateTeamScore(0, pOneIdx, pThreeIdx);
+        calculateTeamScore(1, pTwoIdx, pFourIdx);
     }
 
-    private void calculateTeamOneScore() {
-        int trueBidTotal = this.playerBid[pOneIdx] + this.playerBid[pThreeIdx];
-        int trickTotal = this.playerTricks[pOneIdx] + this.playerTricks[pThreeIdx];
-        this.teamBags[0] = 0;
-        if (this.playerBid[pOneIdx] == Game.blindNilIdx) {
+    private void calculateTeamScore(int team, int playerA, int playerB) {
+        int trueBidTotal = this.playerBid[playerA] + this.playerBid[playerB];
+        int trickTotal = this.playerTricks[playerA] + this.playerTricks[playerB];
+        this.teamBags[team] = 0;
+        if (this.playerBid[playerA] == Game.blindNilIdx) {
             trueBidTotal++;
         }
-        if (this.playerBid[pThreeIdx] == Game.blindNilIdx) {
+        if (this.playerBid[playerB] == Game.blindNilIdx) {
             trueBidTotal++;
         }
-        this.teamScore[0] = 0;
+        this.teamScore[team] = 0;
         if (trickTotal > trueBidTotal) {
-            this.teamBags[0] = trickTotal - trueBidTotal;
+            this.teamBags[team] = trickTotal - trueBidTotal;
         }
-        if (this.playerBid[pOneIdx] == Game.blindNilIdx) {
-            if (this.playerTricks[pOneIdx] == 0) {
-                this.teamScore[0] += doubleNilWinner;
+        if (this.playerBid[playerA] == Game.blindNilIdx) {
+            if (this.playerTricks[playerA] == 0) {
+                this.teamScore[team] += doubleNilWinner;
             } else {
-                this.teamScore[0] -= doubleNilWinner;
+                this.teamScore[team] -= doubleNilWinner;
             }
         }
-        if (this.playerBid[pOneIdx] == 0) {
-            if (this.playerTricks[pOneIdx] == 0) {
-                this.teamScore[0] += nilWinner;
+        if (this.playerBid[playerA] == 0) {
+            if (this.playerTricks[playerA] == 0) {
+                this.teamScore[team] += nilWinner;
             } else {
-                this.teamScore[0] -= nilWinner;
+                this.teamScore[team] -= nilWinner;
             }
         }
-        if (this.playerBid[pThreeIdx] == Game.blindNilIdx) {
-            if (this.playerTricks[pThreeIdx] == 0) {
-                this.teamScore[0] += doubleNilWinner;
+        if (this.playerBid[playerB] == Game.blindNilIdx) {
+            if (this.playerTricks[playerB] == 0) {
+                this.teamScore[team] += doubleNilWinner;
             } else {
-                this.teamScore[0] -= doubleNilWinner;
+                this.teamScore[team] -= doubleNilWinner;
             }
         }
-        if (this.playerBid[pThreeIdx] == 0) {
-            if (this.playerTricks[pThreeIdx] == 0) {
-                this.teamScore[0] += nilWinner;
+        if (this.playerBid[playerB] == 0) {
+            if (this.playerTricks[playerB] == 0) {
+                this.teamScore[team] += nilWinner;
             } else {
-                this.teamScore[0] -= nilWinner;
+                this.teamScore[team] -= nilWinner;
             }
         }
-        if (this.teamBags[0] > 0) {
-            this.teamScore[0] += trueBidTotal * 10;
-            this.teamScore[0] += this.teamBags[0];
-        } else if (this.teamBags[0] != 0) {
+        if (this.teamBags[team] > 0) {
+            this.teamScore[team] += trueBidTotal * 10;
+            this.teamScore[team] += this.teamBags[team];
+        } else if (this.teamBags[team] != 0) {
         } else {
             if (trickTotal < trueBidTotal) {
-                this.teamScore[0] -= underBidPenalty * trueBidTotal;
+                this.teamScore[team] -= underBidPenalty * trueBidTotal;
             } else {
-                this.teamScore[0] += trueBidTotal * 10;
-            }
-        }
-    }
-
-    private void calculateTeamTwoScore() {
-        int trueBidTotal = this.playerBid[pTwoIdx] + this.playerBid[pFourIdx];
-        int trickTotal = this.playerTricks[pTwoIdx] + this.playerTricks[pFourIdx];
-        this.teamBags[1] = 0;
-        if (this.playerBid[pTwoIdx] == Game.blindNilIdx) {
-            trueBidTotal++;
-        }
-        if (this.playerBid[pFourIdx] == Game.blindNilIdx) {
-            trueBidTotal++;
-        }
-        this.teamScore[1] = 0;
-        if (trickTotal > trueBidTotal) {
-            this.teamBags[1] = trickTotal - trueBidTotal;
-        }
-        if (this.playerBid[pTwoIdx] == Game.blindNilIdx) {
-            if (this.playerTricks[pTwoIdx] == 0) {
-                this.teamScore[1] += doubleNilWinner;
-            } else {
-                this.teamScore[1] -= doubleNilWinner;
-            }
-        }
-        if (this.playerBid[pTwoIdx] == 0) {
-            if (this.playerTricks[pTwoIdx] == 0) {
-                this.teamScore[1] += nilWinner;
-            } else {
-                this.teamScore[1] -= nilWinner;
-            }
-        }
-        if (this.playerBid[pFourIdx] == Game.blindNilIdx) {
-            if (this.playerTricks[pFourIdx] == 0) {
-                this.teamScore[1] += doubleNilWinner;
-            } else {
-                this.teamScore[1] -= doubleNilWinner;
-            }
-        }
-        if (this.playerBid[pFourIdx] == 0) {
-            if (this.playerTricks[pFourIdx] == 0) {
-                this.teamScore[1] += nilWinner;
-            } else {
-                this.teamScore[1] -= nilWinner;
-            }
-        }
-        if (this.teamBags[1] > 0) {
-            this.teamScore[1] += trueBidTotal * 10;
-            this.teamScore[1] += this.teamBags[1];
-        } else if (this.teamBags[1] != 0) {
-        } else {
-            if (trickTotal < trueBidTotal) {
-                this.teamScore[1] -= underBidPenalty * trueBidTotal;
-            } else {
-                this.teamScore[1] += trueBidTotal * 10;
+                this.teamScore[team] += trueBidTotal * 10;
             }
         }
     }
@@ -189,25 +134,25 @@ class Round {
     void editPlayerOne(int playerOneBid, int playerOneTricks) {
         this.playerBid[pOneIdx] = playerOneBid;
         this.playerTricks[pOneIdx] = playerOneTricks;
-        calculateTeamOneScore();
+        calculateTeamScore(0, pOneIdx, pThreeIdx);
     }
 
     void editPlayerTwo(int playerTwoBid, int playerTwoTricks) {
         this.playerBid[pTwoIdx] = playerTwoBid;
         this.playerTricks[pTwoIdx] = playerTwoTricks;
-        calculateTeamTwoScore();
+        calculateTeamScore(1, pTwoIdx, pFourIdx);
     }
 
     void editPlayerThree(int playerThreeBid, int playerThreeTricks) {
         this.playerBid[pThreeIdx] = playerThreeBid;
         this.playerTricks[pThreeIdx] = playerThreeTricks;
-        calculateTeamOneScore();
+        calculateTeamScore(0, pOneIdx, pThreeIdx);
     }
 
     void editPlayerFour(int playerFourBid, int playerFourTricks) {
         this.playerBid[pFourIdx] = playerFourBid;
         this.playerTricks[pFourIdx] = playerFourTricks;
-        calculateTeamTwoScore();
+        calculateTeamScore(1, pTwoIdx, pFourIdx);
     }
 
     String displayPlayerOne() {
