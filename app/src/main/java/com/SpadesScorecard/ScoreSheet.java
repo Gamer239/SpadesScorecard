@@ -69,7 +69,7 @@ public class ScoreSheet extends Activity {
 
     private String getScoreSheetText() {
         String line;
-        String spacing = getResources().getString(R.string.blind_nil) + "/" + "13 "; //longest example score
+        String spacing = getResources().getString(R.string.blind_nil) + "/" + getResources().getString(R.string.high_bid_trick) + " "; //longest example score
         String output;
 
         output = String.format( "Round %-" + Math.max( Menu.game.getPlayerOneName().length() + 1, spacing.length() ) + "s", Menu.game.getPlayerOneName() );

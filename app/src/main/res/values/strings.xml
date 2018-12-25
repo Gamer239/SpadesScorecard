@@ -29,4 +29,5 @@
     <string name="scoreboard">Scoreboard</string>
     <string name="finish_round">Finish Round</string>
     <string name="finish_round_edit">Finish Round Edit</string>
+    <string name="high_bid_trick">13</string>
 </resources>
