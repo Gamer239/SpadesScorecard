@@ -62,14 +62,14 @@ public class ScoreSheet extends Activity {
 
     private String formatPlayerBidTrick(int Bid, int Tricks) {
         if(Bid == Game.blindNilIdx) {
-            return "00" + "/" + Tricks;
+            return getResources().getString(R.string.blind_nil) + "/" + Tricks;
         }
         return Bid + "/" + Tricks;
     }
 
     private String getScoreSheetText() {
         String line;
-        String spacing = "00/13 "; //longest example score
+        String spacing = getResources().getString(R.string.blind_nil) + "/" + "13 "; //longest example score
         String output;
 
         output = String.format( "Round %-" + Math.max( Menu.game.getPlayerOneName().length() + 1, spacing.length() ) + "s", Menu.game.getPlayerOneName() );
