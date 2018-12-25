@@ -155,31 +155,4 @@ class Round {
         calculateTeamScore(1, pTwoIdx, pFourIdx);
     }
 
-    String displayPlayerOne() {
-        if (this.playerBid[pOneIdx] == Game.blindNilIdx) {
-            return "00/" + this.playerTricks[pOneIdx];
-        }
-        return this.playerBid[pOneIdx] + "/" + this.playerTricks[pOneIdx];
-    }
-
-    String displayPlayerTwo() {
-        if (this.playerBid[pTwoIdx] == Game.blindNilIdx) {
-            return "00/" + this.playerTricks[pTwoIdx];
-        }
-        return this.playerBid[pTwoIdx] + "/" + this.playerTricks[pTwoIdx];
-    }
-
-    String displayPlayerThree() {
-        if (this.playerBid[pThreeIdx] == Game.blindNilIdx) {
-            return "00/" + this.playerTricks[pThreeIdx];
-        }
-        return this.playerBid[pThreeIdx] + "/" + this.playerTricks[pThreeIdx];
-    }
-
-    String displayPlayerFour() {
-        if (this.playerBid[pFourIdx] == Game.blindNilIdx) {
-            return "00/" + this.playerTricks[pFourIdx];
-        }
-        return this.playerBid[pFourIdx] + "/" + this.playerTricks[pFourIdx];
-    }
 }

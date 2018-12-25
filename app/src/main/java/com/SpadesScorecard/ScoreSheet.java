@@ -60,6 +60,13 @@ public class ScoreSheet extends Activity {
         throw new InvalidInputException();
     }
 
+    private String formatPlayerBidTrick(int Bid, int Tricks) {
+        if(Bid == Game.blindNilIdx) {
+            return "00" + "/" + Tricks;
+        }
+        return Bid + "/" + Tricks;
+    }
+
     private String getScoreSheetText() {
         String line;
         String spacing = "00/13 "; //longest example score
@@ -76,16 +83,16 @@ public class ScoreSheet extends Activity {
             line = String.format("%-6s", String.valueOf(i+1));
 
             output = String.valueOf(output) + line;
-            line = String.format("%-" + Math.max(Menu.game.getPlayerOneName().length() + 1, spacing.length()) + "s", a.displayPlayerOne());
+            line = String.format("%-" + Math.max(Menu.game.getPlayerOneName().length() + 1, spacing.length()) + "s", formatPlayerBidTrick(a.getPlayerOneBid(), a.getPlayerOneTricks()));
 
             output = String.valueOf(output) + line;
-            line = String.format("%-" + Math.max(Menu.game.getPlayerTwoName().length() + 1, spacing.length()) + "s", a.displayPlayerTwo());
+            line = String.format("%-" + Math.max(Menu.game.getPlayerTwoName().length() + 1, spacing.length()) + "s", formatPlayerBidTrick(a.getPlayerTwoBid(), a.getPlayerTwoTricks()));
 
             output = String.valueOf(output) + line;
-            line = String.format("%-" + Math.max(Menu.game.getPlayerThreeName().length() + 1, spacing.length()) + "s", a.displayPlayerThree());
+            line = String.format("%-" + Math.max(Menu.game.getPlayerThreeName().length() + 1, spacing.length()) + "s", formatPlayerBidTrick(a.getPlayerThreeBid(), a.getPlayerThreeTricks()));
 
             output = String.valueOf(output) + line;
-            line = String.format("%-" + Math.max(Menu.game.getPlayerFourName().length() + 1, spacing.length()) + "s", a.displayPlayerFour());
+            line = String.format("%-" + Math.max(Menu.game.getPlayerFourName().length() + 1, spacing.length()) + "s", formatPlayerBidTrick(a.getPlayerFourBid(),a.getPlayerFourTricks()));
 
             output = String.valueOf(output) + line;
 
