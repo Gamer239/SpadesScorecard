@@ -49,7 +49,7 @@ public class EditRound extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.editround);
         setText();
-        this.confirmButton = (Button) findViewById(R.id.finishEditButton);
+        this.confirmButton = findViewById(R.id.finishEditButton);
         setSpinners();
     }
 
@@ -59,14 +59,14 @@ public class EditRound extends Activity {
         ArrayAdapter<CharSequence> trickAdapter = ArrayAdapter.createFromResource(this, R.array.trick_array, R.layout.spinner);
         trickAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         Round round = Menu.game.getCurrentRound();
-        this.playerOneBid = (Spinner) findViewById(R.id.playerOneBid);
-        this.playerTwoBid = (Spinner) findViewById(R.id.playerTwoBid);
-        this.playerThreeBid = (Spinner) findViewById(R.id.playerThreeBid);
-        this.playerFourBid = (Spinner) findViewById(R.id.playerFourBid);
-        this.playerOneTricks = (Spinner) findViewById(R.id.playerOneTricks);
-        this.playerTwoTricks = (Spinner) findViewById(R.id.playerTwoTricks);
-        this.playerThreeTricks = (Spinner) findViewById(R.id.playerThreeTricks);
-        this.playerFourTricks = (Spinner) findViewById(R.id.playerFourTricks);
+        this.playerOneBid = findViewById(R.id.playerOneBid);
+        this.playerTwoBid = findViewById(R.id.playerTwoBid);
+        this.playerThreeBid = findViewById(R.id.playerThreeBid);
+        this.playerFourBid = findViewById(R.id.playerFourBid);
+        this.playerOneTricks = findViewById(R.id.playerOneTricks);
+        this.playerTwoTricks = findViewById(R.id.playerTwoTricks);
+        this.playerThreeTricks = findViewById(R.id.playerThreeTricks);
+        this.playerFourTricks = findViewById(R.id.playerFourTricks);
         this.playerOneBid.setAdapter(bidAdapter);
         this.playerTwoBid.setAdapter(bidAdapter);
         this.playerThreeBid.setAdapter(bidAdapter);
@@ -86,10 +86,10 @@ public class EditRound extends Activity {
     }
 
     private void setText() {
-        TextView playerOneName = (TextView) findViewById(R.id.playerOneText);
-        TextView playerTwoName = (TextView) findViewById(R.id.playerTwoText);
-        TextView playerThreeName = (TextView) findViewById(R.id.playerThreeText);
-        TextView playerFourName = (TextView) findViewById(R.id.playerFourText);
+        TextView playerOneName = findViewById(R.id.playerOneText);
+        TextView playerTwoName = findViewById(R.id.playerTwoText);
+        TextView playerThreeName = findViewById(R.id.playerThreeText);
+        TextView playerFourName = findViewById(R.id.playerFourText);
         playerOneName.setText(String.format(" %s", Menu.game.getPlayerOneName()));
         playerTwoName.setText(String.format(" %s", Menu.game.getPlayerTwoName()));
         playerThreeName.setText(String.format(" %s", Menu.game.getPlayerThreeName()));

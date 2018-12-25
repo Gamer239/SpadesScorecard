@@ -52,11 +52,11 @@ public class PlayerNames extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.playernames);
-        Button confirmButton = (Button) findViewById(R.id.confirmButton);
-        this.playerOneText = (TextView) findViewById(R.id.playerOneText);
-        this.playerTwoText = (TextView) findViewById(R.id.playerTwoText);
-        this.playerThreeText = (TextView) findViewById(R.id.playerThreeText);
-        this.playerFourText = (TextView) findViewById(R.id.playerFourText);
+        Button confirmButton = findViewById(R.id.confirmButton);
+        this.playerOneText = findViewById(R.id.playerOneText);
+        this.playerTwoText = findViewById(R.id.playerTwoText);
+        this.playerThreeText = findViewById(R.id.playerThreeText);
+        this.playerFourText = findViewById(R.id.playerFourText);
         confirmButton.setOnClickListener(new ConfirmBtn());
     }
 }

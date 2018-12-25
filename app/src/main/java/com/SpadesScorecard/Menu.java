@@ -43,7 +43,7 @@ public class Menu extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
-        Button continueGameButton = (Button) findViewById(R.id.continueGameButton);
+        Button continueGameButton = findViewById(R.id.continueGameButton);
         findViewById(R.id.startGameButton).setOnClickListener(new NewGameBtn());
         continueGameButton.setOnClickListener(new ContinueGameBtn());
     }

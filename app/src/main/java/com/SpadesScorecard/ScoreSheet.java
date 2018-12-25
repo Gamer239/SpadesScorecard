@@ -33,9 +33,9 @@ public class ScoreSheet extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scoresheet);
-        this.editRoundButton = (Button) findViewById(R.id.editRoundButton);
-        this.roundNumber = (Spinner) findViewById(R.id.roundNumberSpinner);
-        this.output = (TextView) findViewById(R.id.output);
+        this.editRoundButton = findViewById(R.id.editRoundButton);
+        this.roundNumber = findViewById(R.id.roundNumberSpinner);
+        this.output = findViewById(R.id.output);
         ArrayAdapter<CharSequence> roundAdapter = ArrayAdapter.createFromResource(this, R.array.choice_array, android.R.layout.simple_spinner_item);
         roundAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         this.roundNumber.setAdapter(roundAdapter);
