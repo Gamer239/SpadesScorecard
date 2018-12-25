@@ -18,7 +18,7 @@ public class Menu extends Activity {
 
         public void onClick(View v) {
             if (Menu.game != null) {
-                new Builder(Menu.this).setIcon(R.drawable.icon).setTitle(R.string.are_you_sure).setMessage(R.string.erase_current_game).setPositiveButton("Continue", null).setNegativeButton("Cancel", null).show();
+                new Builder(Menu.this).setIcon(R.drawable.icon).setTitle(R.string.are_you_sure).setMessage(R.string.erase_current_game).setPositiveButton(R.string.continue_btn, null).setNegativeButton(R.string.cancel_btn, null).show();
                 return;
             }
             Menu.game = new Game();
