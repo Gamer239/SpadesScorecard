@@ -67,7 +67,6 @@ class Round {
         if (this.teamBags[team] > 0) {
             this.teamScore[team] += trueBidTotal * 10;
             this.teamScore[team] += this.teamBags[team];
-        } else if (this.teamBags[team] != 0) {
         } else {
             if (trickTotal < trueBidTotal) {
                 this.teamScore[team] -= underBidPenalty * trueBidTotal;
