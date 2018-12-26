@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class ScoreSheet extends Activity {
     private Button editRoundButton;
     private TextView output;
@@ -36,7 +38,11 @@ public class ScoreSheet extends Activity {
         this.editRoundButton = findViewById(R.id.editRoundButton);
         this.roundNumber = findViewById(R.id.roundNumberSpinner);
         this.output = findViewById(R.id.output);
-        ArrayAdapter<CharSequence> roundAdapter = ArrayAdapter.createFromResource(this, R.array.choice_array, android.R.layout.simple_spinner_item);
+        ArrayList<String> rounds = new ArrayList<>();
+        for( int i = 0; i < Menu.game.getRoundCount(); i++ ) {
+            rounds.add(String.valueOf(i+1));
+        }
+        ArrayAdapter<String> roundAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, rounds);
         roundAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         this.roundNumber.setAdapter(roundAdapter);
     }
