@@ -3,16 +3,22 @@ package com.SpadesScorecard;
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.content.Intent;
+import android.graphics.SurfaceTexture;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.SpadesScorecard.PlayerScore.OnFragmentInteractionListener;
+
 import java.util.Locale;
 
-public class Scoreboard extends Activity {
+public class Scoreboard extends FragmentActivity implements OnFragmentInteractionListener {
     private static int p4tPos = 0;
     private static int p4bPos = 0;
     private static int p3tPos = 0;
@@ -46,6 +52,11 @@ public class Scoreboard extends Activity {
     private TextView playerTwoName;
     private TextView playerTwoScore;
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
     class FinishRoundBtn implements OnClickListener {
 
         FinishRoundBtn() {
@@ -70,6 +81,7 @@ public class Scoreboard extends Activity {
         }
 
         public void onClick(View v) {
+            //noinspection SpellCheckingInspection
             Scoreboard.this.startActivity(new Intent("com.SpadesScorecard.SCORESHEET"));
         }
     }
@@ -81,8 +93,8 @@ public class Scoreboard extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.scoreboard);
-        this.playerOneName = findViewById(R.id.playerOneText);
+        setContentView(R.layout.sample_scorebaord);
+        /*this.playerOneName = findViewById(R.id.playerOneText);
         this.playerTwoName = findViewById(R.id.playerTwoText);
         this.playerThreeName = findViewById(R.id.playerThreeText);
         this.playerFourName = findViewById(R.id.playerFourText);
@@ -110,7 +122,11 @@ public class Scoreboard extends Activity {
         playerTwoTricks.setAdapter(trickAdapter);
         playerThreeTricks.setAdapter(trickAdapter);
         playerFourTricks.setAdapter(trickAdapter);
-        setSelections();
+        setSelections();*/
+        PlayerScore ps = new PlayerScore();
+        FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
+        trans.replace(R.id.frame, ps);
+        trans.commit();
     }
 
     private void clearBoard() {
@@ -126,10 +142,10 @@ public class Scoreboard extends Activity {
 
     protected void onResume() {
         super.onResume();
-        setSelections();
-        setScreen();
-        findViewById(R.id.finishRoundButton).setOnClickListener(new FinishRoundBtn());
-        findViewById(R.id.scoreSheetButton).setOnClickListener(new ScoreSheetBtn());
+        //setSelections();
+        //setScreen();
+        //findViewById(R.id.finishRoundButton).setOnClickListener(new FinishRoundBtn());
+        //findViewById(R.id.scoreSheetButton).setOnClickListener(new ScoreSheetBtn());
     }
 
     protected void onStop() {
