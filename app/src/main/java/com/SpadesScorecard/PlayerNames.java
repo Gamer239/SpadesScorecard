@@ -45,6 +45,7 @@ public class PlayerNames extends Activity {
             }
 
 
+            //noinspection SpellCheckingInspection
             PlayerNames.this.startActivity(new Intent("com.SpadesScorecard.BEGINGAME"));
         }
     }

@@ -25,6 +25,7 @@ public class ScoreSheet extends Activity {
         public void onClick(View v) {
             try {
                 Menu.game.setRoundIndex(ScoreSheet.this.getRoundSelection() - 1);
+                //noinspection SpellCheckingInspection
                 ScoreSheet.this.startActivity(new Intent("com.SpadesScorecard.EDITROUND"));
             } catch (Exception e) {
                 new Builder(ScoreSheet.this).setMessage(R.string.InvalidInput).setTitle(R.string.Error).setCancelable(true).setNeutralButton(android.R.string.ok, null).show();

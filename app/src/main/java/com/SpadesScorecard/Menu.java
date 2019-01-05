@@ -22,6 +22,7 @@ public class Menu extends Activity {
                 return;
             }
             Menu.game = new Game();
+            //noinspection SpellCheckingInspection
             Menu.this.startActivity(new Intent("com.SpadesScorecard.SETNAMES"));
         }
     }
@@ -35,6 +36,7 @@ public class Menu extends Activity {
             if (Menu.game == null) {
                 new Builder(Menu.this).setMessage(R.string.no_game_found).setTitle(R.string.Error).setCancelable(true).setNeutralButton(android.R.string.ok, null).show();
             } else {
+                //noinspection SpellCheckingInspection
                 Menu.this.startActivity(new Intent("com.SpadesScorecard.SETNAMES"));
             }
         }
