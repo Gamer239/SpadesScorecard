@@ -69,7 +69,7 @@ public class PlayerScore extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_playerscore, container, false);
-        playerFourBid = view.findViewById(R.id.spinner);
+        playerFourBid = view.findViewById(R.id.BidSpinnerFragment);
         ArrayAdapter<CharSequence> bidAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.bid_array, R.layout.spinner);
         bidAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         playerFourBid.setAdapter(bidAdapter);

@@ -1,16 +1,13 @@
 package com.SpadesScorecard;
 
-import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.content.Intent;
-import android.graphics.SurfaceTexture;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -125,7 +122,7 @@ public class Scoreboard extends FragmentActivity implements OnFragmentInteractio
         setSelections();*/
         PlayerScore ps = new PlayerScore();
         FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
-        trans.replace(R.id.frame, ps);
+        trans.replace(R.id.TopLeftFrame, ps);
         trans.commit();
     }
 
